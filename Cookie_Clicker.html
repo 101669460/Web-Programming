@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieClicker</title>
+</head>
+<style>
+.page{
+    background-color: lightblue;
+}
+
+.table{
+    margin-top: 10%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:darkgrey;
+    overflow-x: hidden;
+
+}
+.cookie{
+    display: flex;
+    align-self: left;
+    z-index: 1;
+    position: fixed;
+    margin-top: 5%;
+    margin-left: 25%;
+    border-radius: 50px;
+
+}
+.counter{
+    z-index: 1;
+    position: fixed;
+
+}
+.button1{
+    background-color:white;
+    border-radius: 5px;
+}
+.button2{
+    background-color:darkgrey;
+}
+</style>
+<body>
+    <div class = "page">
+        <div class="cookie"> 
+            <button type="button" class = "button1" onclick="myFunction()"><img src="https://lh3.googleusercontent.com/proxy/F812p_Rtpkrven7wFKg0Y77q_1Fnsw47j5wn6PGMuO-Y_85nDQmnftGnWdb4ShnOiy1l9HqQSb4CajRd4sLlIX6ZtHMoJlI"></button>
+        </div>    
+        <div>
+            <table class="table">
+                <tr>
+                    <th>Upgrades</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td><button class = "button2" onclick="dcFunction()">Double Click</button></td>
+                    <td>10 Cookies</td>
+                </tr>
+                <tr>
+                    <td><button class = "button2" onclick="factoryFunction()">Factory</button></td>
+                    <td>50 Cookies</td>
+                </tr>
+            </table>
+        </div>
+        <div class="counter">
+            <h1>Total Cookies:</h1>
+            <p id="cookie"></p>
+        </div>
+    </div>
+
+    <script>
+    var c = 0;
+    var d = 1;
+    function myFunction() {
+        c = c + d;
+        document.getElementById("cookie").innerHTML = c;
+    }
+    function dcFunction(){
+        if(d < 2){
+            if(c >= 10){
+            c = c-10;
+            d++;
+            document.getElementById("cookie").innerHTML = c;
+            }
+        }
+    }
+    function factoryFunction(){
+        if(c >= 50){
+            c = c - 50;
+            setInterval(function(){
+                c++;
+                document.getElementById("cookie").innerHTML = c;
+                }, 
+                1000);
+        }
+    }
+    
+    </script>
+</body>
+</html>
+
+
+
