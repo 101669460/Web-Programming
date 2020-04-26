@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    background-color: lightgrey;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.major{
+    display: flex;
+    background-color: white;
+    border: none;
+    flex-direction: column;
+    margin: 5px;
+    padding-left: 15px;
+}
+.minor{
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    flex-direction: column;
+    padding: 15px;
+}
+h1{
+    color: grey;
+    font-size:30px;
+}
+.heading{
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+}
+.purple{
+    color: purple;
+}
+p{
+    margin:0;
+    padding: 8px;
+}
